@@ -8,6 +8,14 @@
         msg: "{{ tower_project_revision }}"
       register: revision_info
     
-    - name: Job name
+    - name: Job id
       debug:
         msg: "{{ tower_job_id }}"
+
+    - name: Job name
+      debug:
+        msg: "{{ tower_job_template_id }}"
+
+
+
+        
