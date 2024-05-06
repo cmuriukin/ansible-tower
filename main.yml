@@ -10,4 +10,4 @@
     
     - name: Job name
       debug:
-        msg: "{{ inventory_hostname }}"
+        msg: "{{ tower_job_id }}"
