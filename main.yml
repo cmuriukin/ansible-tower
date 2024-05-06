@@ -1,0 +1,13 @@
+---
+- name: get trigram
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: Get scm_revision details
+      debug:
+        msg: "{{ tower_project_revision }}"
+      register: revision_info
+    
+    - name: Job name
+      debug:
+        msg: "{{ tower_job_name }}"
