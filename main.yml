@@ -16,6 +16,14 @@
       debug:
         msg: "{{ tower_job_template_name }}"
 
+    - name: Extract tags from scm_revision
+      set_fact:
+        tags_list: "{{ revision_info.msg | regex_findall('(?<=tag:)[^,\\s]+') }}"
+      
+    - name: Print all possible tags
+      debug:
+        var: tags_list
+
 
 
         
